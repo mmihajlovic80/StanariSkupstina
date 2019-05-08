@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forum</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="/src/style.css" rel="stylesheet" type="text/css">
+    <script src="./src/list.js"></script>
+</head>
+
+<body>
+    <div style="background-color: rgba(204, 204, 179, 0.26); " class="container">
+
+    <div style="padding: 30px">
+        <h2 style="font-size: 20px; " class="text-center" >Портал за комуникацију и размену информација станара зграде у улици Бојана Гајића Пиште бр. 17</h2>
+        <hr>
+        <br>
+
+        <form method="POST">
+            <div class="form-group">
+
+                <label style="font-size: 18px">Унесите Вашу поруку</label>
+                <br>
+                <input type="text" name="poruka" style="width: 500px; height: 100px; font-size: 18px;"   class="form-control" id="poruka" placeholder="Унесите поруку...." required>
+                <br>
+
+            </div>
+
+            <button style="font-size: 18px" type="submit" class="btn btn-primary">Пошаљите поруку</button>
+
+            <a href="/logout" style="font-size: 18px; float:right;" type="submit" class="btn btn-primary" class="btn btn-info">Изађите</a>
+
+        </form>
+
+
+        <table class="table table-sm" style="font-size: 16px">
+            <thead>
+                <tr>
+                    <th scope="col">Корисник</th>
+                    <th scope="col">Порука</th>
+                    <th scope="col">Време</th>
+                </tr>
+            </thead>
+
+            <% for(let i=0; i<podaci.length; i++){ %>
+                <tr>
+                    <td>
+                        <%= podaci[i].korisnik %>
+                    </td> 
+                    <td>
+                        <%= podaci[i].poruka %>
+                    </td>
+                    <td>
+                        <%= podaci[i].vreme %>
+                    </td>
+                    
+
+                </tr>
+                <% } %><br>
+
+            
+
+        </table>
+    </div>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+    .container{
+        /* background-image: url("views/1.png"); */
+        background-color: rgba(204, 204, 179, 0.26);
+        padding-bottom: 40px;
+    }
+    .alertErrors {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+    }
+
+    .closebtnErrors {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .alertSuccess {
+        padding: 20px;
+        background-color: #1ab394;
+        color: white;
+    }
+
+    .closebtnSuccess {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+
+    .closebtnSuccess:hover {
+        color: black;
+    }
+
+
+
+    .closebtnErrors:hover {
+        color: black;
+    }
+
+</style>
+
+<body>
+
+<% if(typeof errorsArray != 'undefined') { %>
+
+    <% errorsArray.forEach(function (error) { %>
+        <div class="alertErrors">
+            <span class="closebtnErrors" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Warning!</strong> <%= error.msg %>.
+        </div>
+        <div>&nbsp;</div>
+
+   <% }); %>
+<% } %>
+
+
+<% if(error_msg != '') { %>
+
+    <div class="alertErrors">
+        <span class="closebtnErrors" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Пажња!</strong> <%= error_msg %>.
+    </div>
+    <div>&nbsp;</div>
+
+<% } %>
+
+<% if(error != '') { %>
+
+    <div class="alertErrors">
+        <span class="closebtnErrors" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Пажња!</strong> <%= error %>.
+    </div>
+    <div>&nbsp;</div>
+
+<% } %>
+
+
+
+</body>
+</html>
+
+
+

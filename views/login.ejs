@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link href="/src/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container">
+    <br>  <p style="font-size: 20px" class="text-center">Портал за комуникацију и размену информација станара зграде у улици Бојана Гајића Пиште бр. 17</p>
+    <hr>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <% include messages %>
+            <div class="card">
+                <header class="card-header">
+                    <a href="/" class="float-right btn btn-outline-primary mt-1">Региструј се</a>
+                    <h4 class="card-title mt-2">Улогуј се</h4>
+                </header>
+                <article class="card-body">
+                    <form action="/login" method="post">
+
+                        <div class="form-group">
+                            <label>Адреса електронске поште</label>
+                            <input id="userEmail" type="email" name="username" class="form-control" placeholder="">
+                            <small class="form-text text-muted">Само за наше личне потребе</small>
+                        </div> <!-- form-group end.// -->
+                        <div class="form-group">
+                            <label>Шифра</label>
+                            <input id="userPass" type="password" name="password" class="form-control" placeholder="">
+                        </div> <!-- form-group end.// -->
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Улогуј се</button>
+                        </div> <!-- form-group// -->
+                    </form>
+                </article> <!-- card-body end .// -->
+                <div class="border-top card-body text-center">Нисте регистровани?<a href="/">Региструј се</a></div>
+            </div> <!-- card.// -->
+        </div> <!-- col.//-->
+
+    </div> <!-- row.//-->
+
+
+</div>
+<!--container end.//-->
+</body>
+</html>

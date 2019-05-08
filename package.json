@@ -1,0 +1,27 @@
+{
+  "name": "zavrsni-rad",
+  "version": "1.0.0",
+  "description": "npm i express",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.2",
+    "nodemon": "^1.18.11",
+    "passport": "^0.4.0",
+    "bcryptjs": "^2.4.3",
+    "passport-local": "^1.0.0",
+    "express-validator": "^5.3.1",
+    "connect-flash": "^0.1.1",
+    "express-message": "^1.2.3",
+    "express-session": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zirafa",
+  "license": "ISC"
+}
